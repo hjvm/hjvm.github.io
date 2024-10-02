@@ -1880,3 +1880,96 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode .sidebar {
+  background-color: #f0f0f0;
+}
+
+body.light-mode .main-content {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Navbar updates for light mode */
+body.light-mode .navbar {
+  background-color: #e0e0e0;
+  color: #000000;
+}
+
+body.light-mode .navbar .navbar-link {
+  color: #000000;
+}
+
+body.light-mode .navbar .navbar-link:hover {
+  color: #007acc;
+}
+
+body.light-mode .navbar .navbar-link.active {
+  color: #007acc;
+}
+
+/* Anchor tags and links */
+body.light-mode a {
+  color: #007acc;
+}
+
+/* Input fields and text areas */
+body.light-mode input, 
+body.light-mode textarea, 
+body.light-mode select {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+/* Buttons */
+body.light-mode button {
+  background-color: #007acc;
+  color: #ffffff;
+}
+
+/* Content inside the main content area */
+body.light-mode .content-card {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+body.light-mode .service-item,
+body.light-mode .testimonials-item {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+/* Specific updates for elements under main-content */
+body.light-mode .main-content h1, 
+body.light-mode .main-content h2, 
+body.light-mode .main-content h3, 
+body.light-mode .main-content h4, 
+body.light-mode .main-content h5, 
+body.light-mode .main-content h6 {
+  color: #000000;
+}
+
+body.light-mode .main-content p,
+body.light-mode .main-content span,
+body.light-mode .main-content li,
+body.light-mode .main-content a {
+  color: #000000;
+}
+
+body.light-mode .main-content .contact-form input,
+body.light-mode .main-content .contact-form textarea {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode .main-content .contact-form button {
+  background-color: #007acc;
+  color: #ffffff;
+}
