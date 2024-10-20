@@ -1973,3 +1973,13 @@ body.light-mode .main-content .contact-form button {
   background-color: #007acc;
   color: #ffffff;
 }
+
+/* Set default color of icons on the webpage. */
+ion-icon {
+  color:var(--orange-yellow-crayola);
+}
+
+/* Set default size of icons on the homepage. */
+.service-icon {
+  font-size: 40px;
+}
