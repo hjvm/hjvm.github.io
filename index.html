@@ -78,7 +78,7 @@
             </div>
 
           </li>
-
+<!--
           <li class="contact-item">
 
             <div class="icon-box">
@@ -92,7 +92,7 @@
             </div>
 
           </li>
-<!--
+
           <li class="contact-item">
 
             <div class="icon-box">
@@ -191,10 +191,11 @@
           </li>
 
         </ul>
-
-        <!--
-        <button onclick="toggleLightMode()">Toggle Light Mode</button>
-        -->
+<!--
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">
+          <ion-icon name="sunny-outline"></ion-icon>
+        </button>
+-->
       </nav>
 
 
@@ -252,7 +253,7 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What I'm doing</h3>
+          <h3 class="h3 service-title">What I do</h3>
 
           <ul class="service-list">
 
@@ -313,7 +314,7 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Phonetics and DSP</h4>
+                <h4 class="h4 service-item-title">Phonetics & DSP</h4>
 
                 <p class="service-item-text">
                   Large scale digital signal processing (DSP) and acoustic analyses of speech databases
@@ -336,13 +337,13 @@
 
           <h3 class="h3 testimonials-title">Advisors</h3>
 
-          <ul class="testimonials-list has-scrollbar">
+          <ul class="testimonials-list">
 
             <li class="testimonials-item">
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <!--<img src="./assets/images/avatar-1.png" alt="Prof. Charles Yang" width="60" data-testimonials-avatar>-->
+                  <img src="https://www.ling.upenn.edu/sites/default/files/styles/max_650x650/public/profile/images/cy.jpg?itok=vgad_pz-" alt="Prof. Charles Yang" data-testimonials-avatar>
                 </figure>
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Prof. Charles Yang</h4>
@@ -350,7 +351,9 @@
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
                     Professor of Linguistics, Computer Science, and Psychology at the University of Pennsylvania.
-                    https://www.ling.upenn.edu/~ycharles/
+                    <a href="https://www.ling.upenn.edu/~ycharles/">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </a>
                   </p>
                 </div>
 
@@ -359,9 +362,9 @@
 
             <li class="testimonials-item">
               <div class="content-card" data-testimonials-item>
-
+                
                 <figure class="testimonials-avatar-box">
-                 <!-- <img src="./assets/images/avatar-2.png" alt="Prof. Mark Liberman" width="60" data-testimonials-avatar>-->
+                 <img src="https://www.ling.upenn.edu/~myl/myl-p2.jpg" alt="Prof. Mark Liberman" data-testimonials-avatar>
                 </figure>
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Prof. Mark Liberman</h4>
@@ -369,9 +372,12 @@
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
                     Christopher H. Browne Distinguished Professor of Linguistics and
-                    Professor Department of Computer and Information Science at 
+                    Professor of Computer and Information Science at 
                     University of Pennsylvania.
-                    https://www.ling.upenn.edu/~myl/               
+                    <a href="https://www.ling.upenn.edu/~myl/">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </a>
+               
                   </p>
                 </div>
 
@@ -382,7 +388,7 @@
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <!--<img src="./assets/images/avatar-3.png" alt="Prof. Daniel Swingley" width="60" data-testimonials-avatar>-->
+                  <img src="https://www.sas.upenn.edu/~swingley/swingley_headshot_17marEd.png" alt="Prof. Daniel Swingley" data-testimonials-avatar>
                 </figure>
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Prof. Daniel Swingley</h4>
@@ -390,7 +396,10 @@
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
                     Professor of Psychology at the University of Pennsylvania.
-                    https://www.sas.upenn.edu/~swingley/
+                    <a href="https://www.sas.upenn.edu/~swingley/">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </a>
+
                   </p>
                 </div>
 
@@ -401,7 +410,7 @@
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <!--<img src="./assets/images/avatar-4.png" alt="Prof. Robert C. Berwick" width="60" data-testimonials-avatar>-->
+                  <img src="http://idss.mit.edu/wp-content/uploads/2015/06/berwick1.jpg" alt="Prof. Robert C. Berwick" data-testimonials-avatar>
                 </figure>
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Prof. Robert C. Berwick</h4>
@@ -411,6 +420,10 @@
                     Robert C. Berwick is Professor of Computational Linguistics and Computer Science and Engineering, 
                     in the Laboratory for Information and Decision Systems and the Institute for Data, Systems, and Society
                     at the Massachusetts Institute of Technology.
+                    <a href="https://berwick.mit.edu">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </a>
+
                   </p>
                 </div>
 
@@ -438,25 +451,21 @@
 
             <div class="modal-img-wrapper">
               <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                <img src="#" alt="#" width="80" data-modal-img>
               </figure>
 
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+              <!--<img src="./assets/images/icon-quote.svg" alt="quote icon">-->
             </div>
 
             <div class="modal-content">
 
-              <h4 class="h3 modal-title" data-modal-title>Prof. Charles Yang</h4>
+              <h4 class="h3 modal-title" data-modal-title>#</h4>
 
-              <time datetime="2021-06-14">14 June, 2021</time>
+              <!--<time datetime="2021-06-14">14 June, 2021</time>-->
 
               <div data-modal-text>
                 <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  #
                 </p>
               </div>
 
@@ -1146,7 +1155,7 @@
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/digs2023_talk.png" alt="Publication Image" loading="lazy">
+                  <img src="./assets/images/digs2023_talk.png" alt="DiGS24 Title Slide" loading="lazy">
                 </figure>
                 <h3 class="project-title">A Variational Model of the Loss of English OV</h3>
                 <p class="project-category">Historical Linguistics</p>
