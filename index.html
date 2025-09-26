@@ -5,7 +5,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hjvm personal portfolio</title>
+  <title>Héctor Javier Vázquez Martínez — Portfolio</title>
+
+  <meta name="description" content="PhD researcher in Computational Linguistics at UPenn. Portfolio featuring research, publications, patents, teaching, and industry experience in NLP, LLMs, and speech.">
+  <meta name="author" content="Héctor Javier Vázquez Martínez">
+  <link rel="canonical" href="https://hjvm.github.io/">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hjvm.github.io/">
+  <meta property="og:title" content="Héctor Javier Vázquez Martínez — Portfolio">
+  <meta property="og:description" content="Computational Linguistics, NLP, LLM evaluation, phonetics & DSP. Publications, patents, and talks.">
+  <meta property="og:image" content="https://hjvm.github.io/assets/images/coqui_taino.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Héctor Javier Vázquez Martínez — Portfolio">
+  <meta name="twitter:description" content="Computational Linguistics, NLP, LLM evaluation, phonetics & DSP. Publications, patents, and talks.">
+  <meta name="twitter:image" content="https://hjvm.github.io/assets/images/coqui_taino.png">
 
   <!--
     - favicon
@@ -23,19 +38,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Héctor Javier Vázquez Martínez",
+    "url": "https://hjvm.github.io/",
+    "image": "https://hjvm.github.io/assets/images/my-avatar.png",
+    "jobTitle": "PhD Researcher in Computational Linguistics",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Pennsylvania",
+      "url": "https://www.upenn.edu/"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Massachusetts Institute of Technology",
+      "url": "https://www.mit.edu/"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/hjvm",
+      "https://github.com/hjvm",
+      "https://aclanthology.org/people/h/hector-javier-vazquez-martinez/",
+      "https://www.semanticscholar.org/author/Héctor-Javier-Vázquez-Martínez/2167068151"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
   <!--
     - #MAIN
   -->
-
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
 
     <aside class="sidebar" data-sidebar>
 
@@ -129,25 +168,25 @@
 
 
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/hjvm" class="social-link">
+            <a href="https://www.linkedin.com/in/hjvm" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
             
           <li class="social-item">
-            <a href="https://github.com/hjvm" class="social-link">
+            <a href="https://github.com/hjvm" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="https://aclanthology.org/people/h/hector-javier-vazquez-martinez/" class="social-link" title="ACL Anthology">
+            <a href="https://aclanthology.org/people/h/hector-javier-vazquez-martinez/" class="social-link" title="ACL Anthology" target="_blank" rel="noopener noreferrer" aria-label="ACL Anthology profile">
               <ion-icon name="book-outline"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="https://www.semanticscholar.org/author/Héctor-Javier-Vázquez-Martínez/2167068151" class="social-link" title="Semantic Scholar">
+            <a href="https://www.semanticscholar.org/author/Héctor-Javier-Vázquez-Martínez/2167068151" class="social-link" title="Semantic Scholar" target="_blank" rel="noopener noreferrer" aria-label="Semantic Scholar profile">
               <ion-icon name="school-outline"></ion-icon>
             </a>
           </li>
@@ -179,7 +218,7 @@
       - #main-content
     -->
 
-    <div class="main-content">
+  <div class="main-content" id="main-content">
 
       <!--
         - #NAVBAR
@@ -190,7 +229,7 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link aria-current="page">About</button>
           </li>
 
           <li class="navbar-item">
@@ -209,12 +248,14 @@
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>
 
+          
+
+          <li class="navbar-item">
+            <button id="theme-toggle" aria-label="Toggle color theme" aria-pressed="false" title="Toggle light/dark mode">
+              <ion-icon id="theme-toggle-icon" name="sunny-outline"></ion-icon>
+            </button>
+          </li>
         </ul>
-<!--
-        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">
-          <ion-icon name="sunny-outline"></ion-icon>
-        </button>
--->
       </nav>
 
 
@@ -225,7 +266,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+  <article class="about active" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -278,6 +319,8 @@
           </p>
         -->
         </section>
+
+        
 
 
         <!--
@@ -569,13 +612,13 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+  <article class="resume" data-page="resume">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
-        <section class="timeline">
+  <section class="timeline" id="education">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -594,7 +637,9 @@
               <span>August 2022 — Present</span>
 
               <p class="timeline-text">
-                PhD in Linguistics.
+                PhD in Linguistics (GPA: 3.94/4.0). <br>
+                Certificate in Language & Communication Sciences. <br>
+                Certificate in College & University Teaching.
               </p>
 
             </li>
@@ -603,10 +648,10 @@
 
               <h4 class="h4 timeline-item-title">Massachusetts Institute of Technology</h4>
 
-              <span>Septempber 2019- June 2021</span>
+              <span>September 2019 — June 2021</span>
 
               <p class="timeline-text">
-                M.Eng. in Electrical Engineering and Computer Science.
+                M.Eng. and B.Sc. in Electrical Engineering & Computer Science (GPA: 5.0/5.0). M.Eng. concentration in Artificial Intelligence (GPA: 4.8/5.0).
               </p>
 
             </li>
@@ -627,7 +672,169 @@
 
         </section>
 
-        <section class="timeline">
+        <!-- Compact Skills (merged with Languages) directly after Education -->
+        <span id="languages" aria-hidden="true" style="position: relative; top: -32px;"></span>
+        <section class="timeline" id="skills">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="settings-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Skills</h3>
+          </div>
+
+          <div class="timeline-grid">
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Programming</h4>
+                <p class="timeline-text">Python (4+ yrs), C#, R, MATLAB</p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Deep Learning Frameworks</h4>
+                <p class="timeline-text">PyTorch, Hugging Face Transformers, TensorFlow (basic)</p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Data &amp; ML Tools</h4>
+                <p class="timeline-text">scikit-learn, NumPy, Pandas, Seaborn, Matplotlib, Librosa</p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Development</h4>
+                <p class="timeline-text">Git, GitHub, VSCode, Jupyter</p>
+              </li>
+            </ol>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Deployment/Systems</h4>
+                <p class="timeline-text">REST APIs, Docker (basic)</p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">NLP Expertise</h4>
+                <p class="timeline-text">Representation learning, fine-tuning, explainability, speech segmentation, TextGrid/Praat, data-efficient modeling</p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Communication</h4>
+                <p class="timeline-text">Technical writing, client demos, grant proposals, patents, stakeholder coordination</p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Languages</h4>
+                <p class="timeline-text">Spanish (native), English (professional), German (B2–C1)</p>
+              </li>
+            </ol>
+          </div>
+
+        </section>
+
+  <!-- Publications (from CV) -->
+  <section class="timeline" id="publications">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Publications</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Evaluating the Existence Proof: LLMs as Cognitive Models of Language Acquisition</h4>
+              <p class="timeline-text">
+                H. J. Vázquez Martínez, A. Heuser, C. Yang & J. Kodner. Forthcoming. In Artificial Knowledge of Language, Vernon Press.
+                <a href="https://lingbuzz.net/lingbuzz/008277" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open publication" title="Open publication"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Acceptability Evaluation of Naturally Written Sentences</h4>
+              <p class="timeline-text">
+                V. Daultani, H. J. Vázquez Martínez, N. Okazaki. Journal of Information Processing, 2024.
+                <a href="https://www.jstage.jst.go.jp/article/ipsjjip/32/0/32_652/_article/-char/ja/" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open publication" title="Open publication"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Evaluating Neural Language Models as Cognitive Models of Language Acquisition</h4>
+              <p class="timeline-text">
+                H. J. Vázquez Martínez, A. Heuser, C. Yang & J. Kodner. GenBench 2023 (EMNLP Workshop), Singapore, 2023.
+                <a href="https://aclanthology.org/2023.genbench-1.4" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open publication" title="Open publication"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">The Acceptability Delta Criterion: Testing Knowledge of Language using Sentence Acceptability Gradience</h4>
+              <p class="timeline-text">
+                H. J. Vázquez Martínez. BlackboxNLP 2021 (EMNLP Workshop), Punta Cana, 2021.
+                <a href="https://aclanthology.org/2021.blackboxnlp-1.38/" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open publication" title="Open publication"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Using Natural Language Processing to Construct a Knowledge Graph of Test Incident Reports</h4>
+              <p class="timeline-text">
+                S. Indurkhya, H. J. Vázquez Martínez, A. Indurkhya, C. Donalek. International Test & Evaluation Symposium, 2021.
+                <a href="https://itea.org/conference-proceedings/38th-international-test-and-evaluation-symposium-proceedings-2021/" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open publication" title="Open publication"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">XAI Methods in VIP bring us closer to interpretable Network Graphs</h4>
+              <p class="timeline-text">
+                H. J. Vázquez Martínez et al. Caltech Explainable AI (XAI) Workshop, 2021.
+                <a href="https://www.ai4science.caltech.edu/xai/index.html" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open publication" title="Open publication"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">The Acceptability Delta Criterion: Memorization is Not Enough</h4>
+              <p class="timeline-text">
+                H. J. Vázquez Martínez. Master's Thesis, Massachusetts Institute of Technology, 2021.
+                <a href="https://hdl.handle.net/1721.1/130703" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open thesis" title="Open thesis"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">BERT's Adaptability to Small Data</h4>
+              <p class="timeline-text">
+                H. J. Vázquez Martínez, A. L. Heuser. BlackboxNLP 2020 (EMNLP Workshop), 2020.
+                <a href="https://aclanthology.org/2020.blackboxnlp-1.24/" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open publication" title="Open publication"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+          </ol>
+
+        </section>
+
+  <!-- Patents (from CV) -->
+  <section class="timeline" id="patents">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="document-attach-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Patents</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Systems and Methods for Numeric Network Extraction</h4>
+              <p class="timeline-text">
+                US-20230306044-A1, 2023. S. Indurkhya, H. J. Vázquez Martínez, A. Salimov, A. Indurkhya, G. Zanfardino, E. Sloan, C. Donalek, M. Amori.
+                <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230306044" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open patent" title="Open patent"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Systems and Methods for Network Explainability</h4>
+              <p class="timeline-text">
+                US-20230004557-A1, 2023. H. J. Vázquez Martínez, S. Indurkhya, G. Zanfardino, A. Indurkhya, S. Sahu, C. Donalek, M. Amori.
+                <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230004557" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open patent" title="Open patent"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Systems and Methods for Natural Language Querying</h4>
+              <p class="timeline-text">
+                US-20220342873-A1, 2022. S. Indurkhya, H. J. Vázquez Martínez, G. Zanfardino, C. Donalek.
+                <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20220342873" class="ext-link" target="_blank" rel="noopener noreferrer" aria-label="Open patent" title="Open patent"><ion-icon name="open-outline" class="ext-link-icon"></ion-icon></a>
+              </p>
+            </li>
+          </ol>
+
+        </section>
+
+  <section class="timeline" id="industry">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -642,7 +849,7 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">AI Innovation Intern</h4>
-              <span>Virtualitics, Inc<span>
+              <span>Virtualitics, Inc</span>
               <span>June 2024 — August 2024</span>
 
               <p class="timeline-text">
@@ -656,7 +863,7 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">Natural Language Processing Engineer</h4>
-              <span>Virtualitics, Inc<span>
+              <span>Virtualitics, Inc</span>
               <span>February 2021 — August 2022</span>
 
               <p class="timeline-text">
@@ -685,236 +892,208 @@
 
         </section>
 
-        <section class="timeline">
+  <section class="timeline" id="teaching">
 
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="easel-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Teaching Experience</h3>
+            <h3 class="h3">Teaching</h3>
           </div>
 
-          <ol class="timeline-list">
+          <div class="timeline-grid">
+            <ol class="timeline-list">
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">LING 4000 - Tutorial in Linguistics</h4>
-              <span>University of Pennsylvania</span>
-              <span>Fall 2024</span>
-            </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">LING 0001 - Introduction to Linguistics</h4>
+                <span>University of Pennsylvania</span>
+                <span>Spring 2025</span>
+              </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">LING 0500 - Introduction to Formal Linguistics</h4>
-              <span>University of Pennsylvania</span>
-              <span>Spring 2024</span>
-            </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">LING 4000 - Tutorial in Linguistics</h4>
+                <span>University of Pennsylvania</span>
+                <span>Fall 2024</span>
+              </li>
 
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">LING 0500 - Introduction to Formal Linguistics</h4>
+                <span>University of Pennsylvania</span>
+                <span>Spring 2024</span>
+              </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">LING 0001 - Introduction to Linguistics</h4>
-              <span>University of Pennsylvania</span>
-              <span>Fall 2023</span>
-            </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">LING 0001 - Introduction to Linguistics</h4>
+                <span>University of Pennsylvania</span>
+                <span>Fall 2023</span>
+              </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">6.034 - Artificial Intelligence</h4>
-              <span>Massachusetts Institute of Technology</span>
-              <span>Fall 2020</span>
-            </li>
+            </ol>
+            <ol class="timeline-list">
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">6.08 - Introduction to EECS via Interconnected Embedded Systems</h4>
-              <span>Massachusetts Institute of Technology</span>
-              <span>Spring 2020</span>
-            </li>
-            
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">6.034 - Artificial Intelligence</h4>
-              <span>Massachusetts Institute of Technology</span>
-              <span>Fall 2019</span>
-            </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">6.034 - Artificial Intelligence</h4>
+                <span>Massachusetts Institute of Technology</span>
+                <span>Fall 2020</span>
+              </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">6.803/6.833 - The Human Intelligence Enterprise</h4>
-              <span>Massachusetts Institute of Technology</span>
-              <span>Spring 2019</span>
-            </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">6.08 - Introduction to EECS via Interconnected Embedded Systems</h4>
+                <span>Massachusetts Institute of Technology</span>
+                <span>Spring 2020</span>
+              </li>
+              
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">6.034 - Artificial Intelligence</h4>
+                <span>Massachusetts Institute of Technology</span>
+                <span>Fall 2019</span>
+              </li>
 
-          </ol>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">6.803/6.833 - The Human Intelligence Enterprise</h4>
+                <span>Massachusetts Institute of Technology</span>
+                <span>Spring 2019</span>
+              </li>
+
+            </ol>
+          </div>
 
         </section>
 
-        <section class="timeline">
+  <span id="leadership" aria-hidden="true" style="position: relative; top: -32px;"></span>
+  <section class="timeline" id="affiliations">
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="trophy-outline"></ion-icon>
+              <ion-icon name="people-outline"></ion-icon>
             </div>
         
-            <h3 class="h3">Leadership Experience</h3>
+            <h3 class="h3">Professional &amp; Extracurricular Affiliations</h3>
           </div>
         
           <ol class="timeline-list">
-            
+
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">48th Annual Penn Linguistics Conference (PLC48)</h4>
-              <span>Philadelphia, PA</span>
-              <span>PLC48 Chair (September 2023 - Present)</span>
-              <p class="timeline-text">
-                As the Project Manager for a team of 20 PhD students in the UPenn Linguistics Department, I interface with the department faculty, the UPenn administration, and the Graduate Linguistics Society of the university to organize the 48th installment of the Penn Linguistics Conference. 
-                I coordinate working meetings with each subcommittee, write weekly progress reports, set dated milestones, and delegate tasks as needed.
-              </p>
+              <h4 class="h4 timeline-item-title">Member, Association for Computational Linguistics</h4>
+              <span>2021&ndash;present</span>
             </li>
-        
+
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">47th Annual Penn Linguistics Conference (PLC47)</h4>
-              <span>Philadelphia, PA</span>
-              <span>Head of Finance (September 2022 - May 2023)</span>
-              <p class="timeline-text">
-                Organized and managed the first in-person Penn Linguistics Conference since 2019. I opened new funding sources, raised approximately $16K USD, and managed the budget while adapting to inflationary pressures.
-                I revamped the conference website, managed its ticketing platform, and exceeded our revenue target by $4K USD.
-              </p>
+              <h4 class="h4 timeline-item-title">Member, Linguistics Society of America</h4>
+              <span>2024&ndash;present</span>
             </li>
-        
+
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">MIT Casino Rueda</h4>
-              <span>Cambridge, MA</span>
-              <span>Dance Instructor, Curriculum Director (September 2018 - February 2020)</span>
-              <p class="timeline-text">
-                As the head instructor of MIT's Casino (Cuban Salsa) Rueda group, I taught weekly open lessons to the MIT and Cambridge-Boston community. I also designed curriculums, trained instructors, and coordinated performances.
-              </p>
+              <h4 class="h4 timeline-item-title">Chair, The New Mind workshop &amp; AI4GOOD Research Incubator</h4>
+              <span>2024&ndash;present</span>
             </li>
-        
+
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">NCAA Division 1 MIT Men's Lightweight Rowing Team</h4>
-              <span>Cambridge, MA</span>
-              <span>Team Member (September 2015 - May 2019)</span>
-              <p class="timeline-text">
-                Joined as a walk-on novice and competed on the varsity team for all four years, culminating in a place in the top varsity boat (1V) during my senior year.
-              </p>
+              <h4 class="h4 timeline-item-title">Chair, 48th Annual Penn Linguistics Conference (PLC48)</h4>
+              <span>2023&ndash;2024</span>
             </li>
-        
+
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Association of Puerto Rican Students at MIT (APR)</h4>
-              <span>Cambridge, MA</span>
-              <span>Association Member (September 2015 - June 2021)</span>
-              <p class="timeline-text">
-                Conducted outreach to encourage prospective Puerto Rican students to apply to MIT and supported incoming students from Puerto Rico in their transition to university life in the Cambridge-Boston area.
-              </p>
+              <h4 class="h4 timeline-item-title">Chair, 47th Annual Penn Linguistics Conference (PLC47)</h4>
+              <span>2022&ndash;2023</span>
             </li>
-        
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Member, Fairmount Rowing Association</h4>
+              <span>2023&ndash;present</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Member, Wharton Crew Rowing Team</h4>
+              <span>2022&ndash;present</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Member, Treinta y Tres Delaware (Rueda de Casino) Dance and Performance Team</h4>
+              <span>2022&ndash;present</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Curriculum Director and Dance Instructor, MIT Casino Rueda</h4>
+              <span>2018&ndash;2020</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Team Member, NCAA Division 1 MIT Men's Lightweight Rowing Team</h4>
+              <span>2015&ndash;2019</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Member, Association of Puerto Rican Students at MIT</h4>
+              <span>2015&ndash;2021</span>
+            </li>
+
           </ol>
         
         </section>
         
 
-        <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
 
-          <ul class="skills-list content-card">
+        <!-- Move Awards & Honors to the end of Resume -->
+        <section class="timeline" id="awards">
 
-            <li class="skills-item">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
 
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="80">90%</data>
-              </div>
+            <h3 class="h3">Awards & Honors</h3>
+          </div>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
+          <div class="timeline-grid">
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Google PhD Fellowship (UPenn Nominee)</h4>
+                <span>May 2025</span>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">National GEM Consortium Employer Fellow (declined)</h4>
+                <span>November 2024</span>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">UPenn Fontaine Fellow</h4>
+                <span>August 2022</span>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">MIT Charles & Jennifer Johnson AI and Decision-Making MEng Thesis Award</h4>
+                <span>June 2022</span>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">MIT Harold L. Hazen Teaching Award</h4>
+                <span>May 2021</span>
+              </li>
+            </ol>
 
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">C#</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Praat</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Language Proficiency</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Spanish</h5>
-                <data value="100">native</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 100%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">English</h5>
-                <data value="100">professional</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 100%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">German</h5>
-                <data value="67">B2</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 67%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Hispanic Scholarship Fund (HSF)</h4>
+                <span>2016 — 2020</span>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Zeno Karl Schindler Summer School Grant</h4>
+                <span>May 2019</span>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">MIT Excellence Award: Albert G. Hill Prize</h4>
+                <span>May 2018</span>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">MIT EECS RE — Research & Innovation Scholar</h4>
+                <span>Aug 2017 — Jan 2018</span>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Palantir Future Scholarship</h4>
+                <span>Oct 2017</span>
+              </li>
+            </ol>
+          </div>
 
         </section>
 
@@ -954,6 +1133,18 @@
               <button data-filter-btn>Data Science</button>
             </li>
 
+            <li class="filter-item">
+              <button data-filter-btn>Publications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Posters</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Patents</button>
+            </li>
+
           </ul>
 
           <div class="filter-select-box">
@@ -984,6 +1175,18 @@
 
               <li class="select-item">
                 <button data-select-item>Data Science</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Publications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Posters</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Patents</button>
               </li>
 
             </ul>
@@ -1154,8 +1357,9 @@
               </a>
             </li>
           -->
-            <li class="project-item active" data-filter-item data-category="Computational Linguistics">
-              <a href="https://lingbuzz.net/lingbuzz/008277">
+            <!-- 2025/Forthcoming -->
+            <li class="project-item active" data-filter-item data-category="Computational Linguistics" data-date="2025-12-31">
+              <a href="https://lingbuzz.net/lingbuzz/008277" target="_blank" rel="noopener noreferrer">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1167,9 +1371,25 @@
                 <p class="project-description">H. J. Vázquez Martínez, A. Heuser, C. Yang & J. Kodner, Forthcoming, Artificial Knowledge of Language, Vernon Press.</p>
               </a>
             </li>
-            
-            <li class="project-item active" data-filter-item data-category="Computational Linguistics">
-              <a href="https://aclanthology.org/2023.genbench-1.4">
+
+            <!-- 2024 -->
+            <li class="project-item active" data-filter-item data-category="Computational Linguistics" data-date="2024-06-30">
+              <a href="https://www.jstage.jst.go.jp/article/ipsjjip/32/0/32_652/_article/-char/ja/" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="https://www.jstage.jst.go.jp/assets/images/jip_logo.png" alt="Journal of Information Processing" loading="lazy">
+                </figure>
+                <h3 class="project-title">Acceptability Evaluation of Naturally Written Sentences</h3>
+                <p class="project-category">Computational Linguistics</p>
+                <p class="project-description">V. Daultani, H. J. Vázquez Martínez, N. Okazaki. Journal of Information Processing, 2024.</p>
+              </a>
+            </li>
+
+            <!-- 2023 -->
+            <li class="project-item active" data-filter-item data-category="Computational Linguistics" data-date="2023-12-01">
+              <a href="https://aclanthology.org/2023.genbench-1.4" target="_blank" rel="noopener noreferrer">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1181,9 +1401,9 @@
                 <p class="project-description">Presented at GenBench2023, Singapore, H. J. Vázquez Martínez, A. Heuser, C. Yang & J. Kodner, 2023.</p>
               </a>
             </li>
-            
-            <li class="project-item active" data-filter-item data-category="Historical Linguistics">
-              <a href="http://digs-2023.llf-paris.fr/index.php?langue=en">
+
+            <li class="project-item active" data-filter-item data-category="Historical Linguistics" data-date="2023-07-01">
+              <a href="http://digs-2023.llf-paris.fr/index.php?langue=en" target="_blank" rel="noopener noreferrer">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1195,9 +1415,10 @@
                 <p class="project-description">H. J. Vázquez Martínez & B. Santorini, 24th Conference on Diachronic Generative Syntax, Paris, 2023.</p>
               </a>
             </li>
-            
-            <li class="project-item active" data-filter-item data-category="publications">
-              <a href="https://aclanthology.org/2021.blackboxnlp-1.38/">
+
+            <!-- 2021 -->
+            <li class="project-item active" data-filter-item data-category="Publications" data-date="2021-11-01">
+              <a href="https://aclanthology.org/2021.blackboxnlp-1.38/" target="_blank" rel="noopener noreferrer">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1209,9 +1430,23 @@
                 <p class="project-description">Presented at the Fourth BlackboxNLP Workshop, Punta Cana, 2021. H. J. Vázquez Martínez.</p>
               </a>
             </li>
-            
-            <li class="project-item active" data-filter-item data-category="publications">
-              <a href="https://itea.org/conference-proceedings/38th-international-test-and-evaluation-symposium-proceedings-2021/">
+
+            <li class="project-item active" data-filter-item data-category="Publications" data-date="2021-06-01">
+              <a href="https://hdl.handle.net/1721.1/130703" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="https://libraries.mit.edu/wp-content/themes/mitlibraries/dist/img/brand/mitlibraries-logo.svg" alt="DSpace@MIT" loading="lazy">
+                </figure>
+                <h3 class="project-title">The Acceptability Delta Criterion: Memorization is Not Enough</h3>
+                <p class="project-category">Publications</p>
+                <p class="project-description">Master's Thesis, MIT, 2021. H. J. Vázquez Martínez.</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="Publications" data-date="2021-09-01">
+              <a href="https://itea.org/conference-proceedings/38th-international-test-and-evaluation-symposium-proceedings-2021/" target="_blank" rel="noopener noreferrer">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1224,9 +1459,38 @@
                 <p class="project-description">Presented at the 38th International Test & Evaluation Symposium, 2021. S. Indurkhya, H. J. Vázquez Martínez, A. Indurkhya, C. Donalek.</p>
               </a>
             </li>
+
+            <li class="project-item active" data-filter-item data-category="Posters" data-date="2021-02-01">
+              <a href="https://www.ai4science.caltech.edu/xai/index.html" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="https://www.caltech.edu/_next/static/media/caltech-seal.9d8e76b2.svg" alt="Caltech XAI Workshop" loading="lazy">
+                </figure>
+                <h3 class="project-title">XAI Methods in VIP bring us closer to interpretable Network Graphs</h3>
+                <p class="project-category">Posters</p>
+                <p class="project-description">H. J. Vázquez Martínez et al., Caltech Explainable AI (XAI) Workshop, 2021.</p>
+              </a>
+            </li>
+
+            <!-- 2020 -->
+            <li class="project-item active" data-filter-item data-category="Posters" data-date="2020-11-01">
+              <a href="https://aclanthology.org/2020.blackboxnlp-1.24/" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="https://blackboxnlp.github.io/2020/assets/img/bb-logo.png" alt="BlackboxNLP 2020" loading="lazy">
+                </figure>
+                <h3 class="project-title">BERT's Adaptability to Small Data</h3>
+                <p class="project-category">Posters</p>
+                <p class="project-description">H. J. Vázquez Martínez, A. L. Heuser. BlackboxNLP 2020.</p>
+              </a>
+            </li>
             
-            <li class="project-item active" data-filter-item data-category="patents">
-              <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230306044">
+            <li class="project-item active" data-filter-item data-category="Patents" data-date="2023-09-28">
+              <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230306044" target="_blank" rel="noopener noreferrer">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1239,8 +1503,8 @@
               </a>
             </li>
             
-            <li class="project-item active" data-filter-item data-category="patents">
-              <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230004557">
+            <li class="project-item active" data-filter-item data-category="Patents" data-date="2023-01-05">
+              <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230004557" target="_blank" rel="noopener noreferrer">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1253,8 +1517,8 @@
               </a>
             </li>
             
-            <li class="project-item active" data-filter-item data-category="Natural Language Processing">
-              <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20220342873">
+            <li class="project-item active" data-filter-item data-category="Patents" data-date="2022-10-27">
+              <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20220342873" target="_blank" rel="noopener noreferrer">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1360,7 +1624,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="https://misti.mit.edu/hector-vazquez-martinez">
+              <a href="https://misti.mit.edu/hector-vazquez-martinez" target="_blank" rel="noopener noreferrer">
 
                 <figure class="blog-banner-box">
                   <img src="https://misti.mit.edu/sites/default/files/2021-08/martinez.png" alt="Best fonts every designer" loading="lazy">
@@ -1389,7 +1653,7 @@
 
 
             <li class="blog-post-item">
-              <a href="https://ethambassadors.ethz.ch/2019/04/11/how-chasing-a-childhood-dream-gave-me-a-new-direction/">
+              <a href="https://ethambassadors.ethz.ch/2019/04/11/how-chasing-a-childhood-dream-gave-me-a-new-direction/" target="_blank" rel="noopener noreferrer">
 
                 <figure class="blog-banner-box">
                   <img src="https://blogs.ethz.ch/ETHambassadors/files/2019/04/05-PHOTO-2018-06-27-19-25-26.jpg" alt="Picture from Jungfraujoch, the top of Europe, during my visit to Interlaken" loading="lazy">
@@ -1416,7 +1680,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="https://www.regattacentral.com/regatta/results2/eventResults.jsp?job_id=6141&event_id=18">
+              <a href="https://www.regattacentral.com/regatta/results2/eventResults.jsp?job_id=6141&event_id=18" target="_blank" rel="noopener noreferrer">
 
                 <figure class="blog-banner-box">
                   <img src="https://rccdn.cachefly.net/images/logos/cb0102e110cd4624996187518ab22911.png" alt="Head of the Charles 2019" loading="lazy">
@@ -1444,7 +1708,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="https://mitathletics.com/news/2019/4/7/4_7_2019_2291.aspx">
+              <a href="https://mitathletics.com/news/2019/4/7/4_7_2019_2291.aspx" target="_blank" rel="noopener noreferrer">
 
                 <figure class="blog-banner-box">
                   <img src="https://mitathletics.com/images/2019/4/7/San_Diego_Crew_Classic_web.jpg?width=1416&quality=80&format=jpg" alt="San Diego Crew Classing 2019" loading="lazy">
@@ -1473,7 +1737,7 @@
 
             
             <li class="blog-post-item">
-              <a href="https://news.mit.edu/2019/student-hector-javier-vazquez-martinez-0207">
+              <a href="https://news.mit.edu/2019/student-hector-javier-vazquez-martinez-0207" target="_blank" rel="noopener noreferrer">
 
                 <figure class="blog-banner-box">
                   <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201902/MIT-Martinez_0.jpg?itok=KnRZJxZD" alt="Jumping into New Experiences" loading="lazy">
@@ -1504,7 +1768,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="https://mitathletics.com/news/2018/10/21/10_21_2018_2287.aspx">
+              <a href="https://mitathletics.com/news/2018/10/21/10_21_2018_2287.aspx" target="_blank" rel="noopener noreferrer">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/hocr_2018.jpg" alt="Head of the Charles 2018" loading="lazy">
@@ -1605,7 +1869,7 @@
              -->
 
             <li class="blog-post-item">
-              <a href="https://mitathletics.com/news/2016/10/23/10_23_2016_2268.aspx">
+              <a href="https://mitathletics.com/news/2016/10/23/10_23_2016_2268.aspx" target="_blank" rel="noopener noreferrer">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/hocr_2016.jpg" alt="Head of the Charles 2016" loading="lazy">
@@ -1655,9 +1919,8 @@
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.4810928187353!2d-75.19716346990015!3d39.95299531007648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c65083d1cc41%3A0x3a6c4233d20a42d9!2s3401%20Walnut%20St%2C%20Philadelphia%2C%20PA%2019104!5e0!3m2!1sen!2sus!4v1727656190427!5m2!1sen!2sus"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.4810928187353!2d-75.19716346990015!3d39.95299531007648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c65083d1cc41%3A0x3a6c4233d20a42d9!2s3401%20Walnut%20St%2C%20Philadelphia%2C%20PA%2019104!5e0!3m2!1sen!2sus!4v1727656190427!5m2!1sen!2sus"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Philadelphia location"></iframe>
           </figure>
         </section>
 
@@ -1668,7 +1931,7 @@
           <form action="#" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="subject" class="form-input" placeholder="Subject" required data-form-input>
 
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>

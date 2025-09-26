@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hjvm.github.io/sitemap.xml

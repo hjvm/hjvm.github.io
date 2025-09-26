@@ -487,6 +487,18 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+/* Theme toggle button inside navbar */
+#theme-toggle {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange-yellow-crayola);
+  padding: 12px;
+}
+
+#theme-toggle:hover { filter: brightness(1.1); }
+
 
 
 
@@ -825,10 +837,50 @@ main {
   box-shadow: 0 0 0 4px var(--jet);
 }
 
+/* Fine-tune two-column skills bullets to match global offsets */
+.timeline-grid .timeline-list { margin-left: 45px; }
+.timeline-grid .timeline-item:not(:last-child)::before { left: -30px; }
+.timeline-grid .timeline-item::after { left: -33px; }
+
 .timeline-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+/* Inline external link icon for citations */
+.timeline-text .ext-link {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 6px;
+  color: var(--orange-yellow-crayola);
+}
+.timeline-text .ext-link-icon {
+  font-size: 14px;
+}
+.timeline-text .ext-link:hover { opacity: 0.9; }
+
+/* Two-column layout for Skills timeline */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 30px;
+}
+/* Ensure both columns align with the same baseline offset as single-column timelines */
+.timeline-grid {
+  padding-left: 0; /* keep default .timeline-list margin-left to control offset */
+}
+/* Normalize the first item's connector in each column to match baseline */
+.timeline-grid .timeline-list .timeline-item:first-child::before {
+  top: -25px;
+}
+.timeline-grid .timeline-list .timeline-item:first-child::after {
+  top: 5px;
+}
+@media (max-width: 700px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -867,6 +919,28 @@ main {
   background: var(--text-gradient-yellow);
   height: 100%;
   border-radius: inherit;
+}
+
+/* Compact two-column list for Resume skills/languages */
+.compact-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 16px;
+  list-style: none;
+  padding: 0 20px 0 20px; /* align with existing skills-list padding */
+  margin: 8px 0 0;
+}
+.compact-two-col .skills-item {
+  margin: 0;
+  padding: 0;
+}
+.compact-two-col .skills-item strong {
+  font-weight: var(--fw-600);
+}
+@media (max-width: 600px) {
+  .compact-two-col {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -1140,6 +1214,10 @@ main {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* Dark mode map inversion for visual consistency */
+body:not(.light-mode) .mapbox iframe {
   filter: grayscale(1) invert(1);
 }
 
@@ -1603,10 +1681,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .article-title { padding-bottom: 20px; }
 
-  .filter-select-box { display: none; }
+  /* Use compact dropdown filters on all viewports */
+  .filter-select-box { display: block; }
 
   .filter-list {
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: center;
     gap: 25px;
@@ -1886,97 +1965,58 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
-/* Light Mode Styles */
+/* Light Mode: swap token values instead of restyling every component */
 body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
+  /* Base surfaces and text */
+  --smoky-black: #f7f7f9; /* page background */
+  --eerie-black-2: #ffffff; /* cards/sidebar/article bg */
+  --eerie-black-1: #ffffff; /* inner surfaces */
+  --jet: #e6e8eb;           /* borders */
+  --onyx: #f1f3f5;          /* chips/pills */
+  --white-1: #222222;       /* secondary text */
+  --white-2: #111111;       /* primary text */
+  --light-gray: #333333;    /* paragraph text */
+  --light-gray-70: rgba(0, 0, 0, 0.6);
+
+  /* Gradients simplified to flat light surfaces */
+  --bg-gradient-onyx: linear-gradient(to bottom right, #ffffff 0%, #fafbfc 100%);
+  --bg-gradient-jet: #ffffff;
+  --border-gradient-onyx: #e6e8eb;
+
+  /* Keep brand accents */
+  /* --orange-yellow-crayola unchanged */
 }
 
-body.light-mode .sidebar {
-  background-color: #f0f0f0;
-}
-
-body.light-mode .main-content {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* Navbar updates for light mode */
+/* Navbar in light mode */
 body.light-mode .navbar {
-  background-color: #e0e0e0;
-  color: #000000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-color: #e6e8eb;
 }
 
 body.light-mode .navbar .navbar-link {
-  color: #000000;
+  color: #333333;
 }
 
-body.light-mode .navbar .navbar-link:hover {
-  color: #007acc;
-}
-
+body.light-mode .navbar .navbar-link:hover,
 body.light-mode .navbar .navbar-link.active {
-  color: #007acc;
+  color: var(--orange-yellow-crayola);
 }
 
-/* Anchor tags and links */
-body.light-mode a {
-  color: #007acc;
-}
+body.light-mode #theme-toggle { color: var(--orange-yellow-crayola); }
 
-/* Input fields and text areas */
-body.light-mode input, 
-body.light-mode textarea, 
-body.light-mode select {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #000000;
-}
+/* Map: remove invert on light */
+body.light-mode .mapbox iframe { filter: none; }
 
-/* Buttons */
-body.light-mode button {
-  background-color: #007acc;
-  color: #ffffff;
-}
-
-/* Content inside the main content area */
-body.light-mode .content-card {
-  background-color: #f0f0f0;
-  color: #000000;
-}
-
-body.light-mode .service-item,
-body.light-mode .testimonials-item {
-  background-color: #f0f0f0;
-  color: #000000;
-}
-
-/* Specific updates for elements under main-content */
-body.light-mode .main-content h1, 
-body.light-mode .main-content h2, 
-body.light-mode .main-content h3, 
-body.light-mode .main-content h4, 
-body.light-mode .main-content h5, 
-body.light-mode .main-content h6 {
-  color: #000000;
-}
-
-body.light-mode .main-content p,
-body.light-mode .main-content span,
-body.light-mode .main-content li,
-body.light-mode .main-content a {
-  color: #000000;
-}
-
-body.light-mode .main-content .contact-form input,
-body.light-mode .main-content .contact-form textarea {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.light-mode .main-content .contact-form button {
-  background-color: #007acc;
-  color: #ffffff;
+/* Make skip link visible on focus for accessibility */
+.skip-link:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 8px 12px;
+  background: #ffd166;
+  color: #000;
+  border-radius: 6px;
 }
 
 /* Set default color of icons on the webpage. */
