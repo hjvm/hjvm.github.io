@@ -607,6 +607,20 @@ main {
   overflow:hidden;
 }
 
+/* Ensure advisor avatars are small on mobile; larger sizes are set in media queries below */
+.testimonials-avatar-box img {
+  width: 56px;
+  height: auto;
+  display: block;
+}
+
+/* Extra-small devices: shrink avatars a bit more */
+@media (max-width: 360px) {
+  .testimonials-avatar-box img {
+    width: 48px;
+  }
+}
+
 .testimonials-item-title { margin-bottom: 7px; }
 
 .testimonials-text {
