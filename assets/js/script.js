@@ -155,7 +155,8 @@ form.addEventListener("submit", async function (e) {
       form.reset();
       formBtnLabel.textContent = "Message sent ✓";
     } else {
-      formBtnLabel.textContent = "Something went wrong — try again";
+      console.error("Web3Forms error:", result);
+      formBtnLabel.textContent = result.message || "Something went wrong — try again";
       formBtn.removeAttribute("disabled");
     }
   } catch (err) {
