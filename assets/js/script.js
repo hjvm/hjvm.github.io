@@ -130,26 +130,41 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-// simple mailto submission to avoid backend; keeps spam bots at bay by formatting body
-form.addEventListener("submit", function (e) {
+// submit the contact form to Web3Forms via AJAX (no page reload)
+const formBtnLabel = formBtn.querySelector("span");
+form.addEventListener("submit", async function (e) {
   e.preventDefault();
-  const subjectInput = (document.querySelector('input[name="subject"]').value || '').trim();
-  const email = (document.querySelector('input[name="email"]').value || '').trim();
-  const message = (document.querySelector('textarea[name="message"]').value || '').trim();
 
-  const subject = encodeURIComponent(subjectInput || 'Portfolio contact');
-  const bodyLines = [
-    `Email: ${email}`,
-    '',
-    message
-  ];
-  const body = encodeURIComponent(bodyLines.join('\n'));
+  // require the hCaptcha to be solved before sending
+  const captcha = form.querySelector('textarea[name="h-captcha-response"]');
+  if (captcha && !captcha.value) {
+    formBtnLabel.textContent = "Please complete the captcha";
+    return;
+  }
 
-  window.location.href = `mailto:hjvm@sas.upenn.edu?subject=${subject}&body=${body}`;
-
-  // Optional UX: disable button briefly
-  formBtn.setAttribute('disabled', '');
-  setTimeout(() => formBtn.removeAttribute('disabled'), 1500);
+  formBtn.setAttribute("disabled", "");
+  formBtnLabel.textContent = "Sending…";
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: new FormData(form),
+    });
+    const result = await res.json();
+    if (result.success) {
+      form.reset();
+      formBtnLabel.textContent = "Message sent ✓";
+    } else {
+      formBtnLabel.textContent = "Something went wrong — try again";
+      formBtn.removeAttribute("disabled");
+    }
+  } catch (err) {
+    formBtnLabel.textContent = "Network error — try again";
+    formBtn.removeAttribute("disabled");
+  } finally {
+    // clear the captcha so a fresh token is required for the next message
+    if (window.hcaptcha) hcaptcha.reset();
+  }
 });
 
 
@@ -183,6 +198,16 @@ for (let i = 0; i < navigationLinks.length; i++) {
     const pageName = this.innerHTML.toLowerCase();
     activatePage(pageName);
     try { history.pushState(null, '', `#${pageName}`); } catch { location.hash = `#${pageName}`; }
+  });
+}
+
+// sidebar "email" affordance opens the Contact form (keeps the address out of the page source)
+const emailContactLink = document.querySelector("[data-open-contact]");
+if (emailContactLink) {
+  emailContactLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    activatePage("contact");
+    try { history.pushState(null, "", "#contact"); } catch { location.hash = "#contact"; }
   });
 }
 
