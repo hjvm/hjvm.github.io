@@ -2042,3 +2042,6 @@ ion-icon {
 .service-icon {
   font-size: 40px;
 }
+
+/* inline links inside About paragraphs */
+.about-text a { display: inline; color: var(--orange-yellow-crayola); }
