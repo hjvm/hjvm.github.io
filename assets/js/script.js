@@ -111,8 +111,6 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
-// contact form (only runs if a form is present on the page)
-if (document.querySelector("[data-form]")) {
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
@@ -169,7 +167,6 @@ form.addEventListener("submit", async function (e) {
     if (window.hcaptcha) hcaptcha.reset();
   }
 });
-}
 
 
 
@@ -202,6 +199,16 @@ for (let i = 0; i < navigationLinks.length; i++) {
     const pageName = this.innerHTML.toLowerCase();
     activatePage(pageName);
     try { history.pushState(null, '', `#${pageName}`); } catch { location.hash = `#${pageName}`; }
+  });
+}
+
+// sidebar "email" affordance opens the Contact form (keeps the address out of the page source)
+const emailContactLink = document.querySelector("[data-open-contact]");
+if (emailContactLink) {
+  emailContactLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    activatePage("contact");
+    try { history.pushState(null, "", "#contact"); } catch { location.hash = "#contact"; }
   });
 }
 
