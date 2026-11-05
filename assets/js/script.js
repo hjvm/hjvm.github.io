@@ -111,6 +111,8 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
+// contact form (only runs if a form is present on the page)
+if (document.querySelector("[data-form]")) {
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
@@ -167,6 +169,7 @@ form.addEventListener("submit", async function (e) {
     if (window.hcaptcha) hcaptcha.reset();
   }
 });
+}
 
 
 
