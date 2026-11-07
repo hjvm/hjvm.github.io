@@ -862,6 +862,15 @@ main {
   line-height: 1.6;
 }
 
+/* Resume / CV download links at the top of the Resume page */
+.resume-downloads { margin-bottom: 30px; }
+.resume-downloads a {
+  display: inline;
+  color: var(--vegas-gold);
+  font-weight: var(--fw-400);
+  text-decoration: underline;
+}
+
 /* Inline external link icon for citations */
 .timeline-text .ext-link {
   display: inline-flex;
